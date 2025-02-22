@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class EbayHomePage extends BasePage {
 
+    private String searchingCategory;
+
     @FindBy(xpath = "//input[@id='gh-ac']")
     private WebElement searchBox;
 
@@ -27,10 +29,20 @@ public class EbayHomePage extends BasePage {
 
     public void selectCategoryByVisibleText(String visibleText){
         new Select(categorySelect).selectByVisibleText(visibleText);
+        searchingCategory = visibleText;
     }
 
-    public MobileResultsPage clickOnSearchButton(){
+    public <T> T clickOnSearchButton(Class<T> pageType){
         searchButton.click();
-        return PageFactory.initElements(driver, MobileResultsPage.class);
+//        return PageFactory.initElements(driver, MobileResultsPage.class);
+//        return PageFactory.initElements(driver, TShirtResultsPage.class);
+//        if(searchingCategory.equals("Cell Phones & Accessories")){
+//            return PageFactory.initElements(driver, (Class<T>) MobileResultsPage.class);
+//        } else if (searchingCategory.equals("Clothing, Shoes & Accessories")) {
+//            return PageFactory.initElements(driver, (Class<T>) TShirtResultsPage.class);
+//        }
+
+//        return null;
+        return PageFactory.initElements(driver, pageType);
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test thread-count="2" parallel="methods" verbose="2" preserve-order="true" name="C:/UCSC/january_2025_day04">
+        <classes>
+            <class name="com.ucsc.automationcc.pom.test.EbayTest">
+                <methods>
+                    <include name="mobilePhoneSearch"/>
+                    <include name="tShirtSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
