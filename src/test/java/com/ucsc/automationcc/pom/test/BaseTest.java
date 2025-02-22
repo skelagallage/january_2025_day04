@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeClass
     public void initBrowser(){
-        driver = WebDriverManager.chromiumdriver().create();
+        driver = WebDriverManager.chromedriver().create();
         driver.manage().window().maximize();
     }
 
