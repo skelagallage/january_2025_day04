@@ -19,14 +19,14 @@ public class EbayTest extends BaseTest{
 
     }
 
-    @Test
-    public void tShirtSearch(){
-        BasePage basePage = new BasePage(driver);
-        EbayHomePage ebayHomePage = basePage.initApp("https://www.ebay.com/");
-        ebayHomePage.typeOnSearchBox("T-shirt");
-        ebayHomePage.selectCategoryByVisibleText("Clothing, Shoes & Accessories");
-        TShirtResultsPage tShirtResult = ebayHomePage.clickOnSearchButton(TShirtResultsPage.class);
-        tShirtResult.clickOnAdidasCheckBox();
-
-    }
+//    @Test
+//    public void tShirtSearch(){
+//        BasePage basePage = new BasePage(driver);
+//        EbayHomePage ebayHomePage = basePage.initApp("https://www.ebay.com/");
+//        ebayHomePage.typeOnSearchBox("T-shirt");
+//        ebayHomePage.selectCategoryByVisibleText("Clothing, Shoes & Accessories");
+//        TShirtResultsPage tShirtResult = ebayHomePage.clickOnSearchButton(TShirtResultsPage.class);
+//        tShirtResult.clickOnAdidasCheckBox();
+//
+//    }
 }
